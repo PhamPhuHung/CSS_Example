@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Gradients</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="linear-gradient, repeating-linear-gradient, radial-gradient, repeating-radial-gradient">
+<meta name="description content="CSS Gradients">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h2 {
+  color: red;
+}
+.ex1 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: linear-gradient(red, yellow);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.ex2 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: linear-gradient(to right, red, yellow);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.ex3 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: linear-gradient(to bottom right, red, yellow);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.ex4 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: linear-gradient(0deg, red, yellow);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.ex5 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: linear-gradient(red, yellow, green);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.rainbow { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.repeat { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: repeating-linear-gradient(to right, red, yellow 10%, green 20%);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.repeat45 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.repeat190 { 
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: repeating-linear-gradient(190deg, red, yellow 10%, green 20%);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.rad {
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: radial-gradient(red, yellow, green);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.raddif {
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+.radshape {
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: radial-gradient(circle, red, yellow, green);
+  vertical-align: middle;
+  text-align: center;
+  padding: 55px;
+}
+.radrepeat {
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+  vertical-align: middle;
+  text-align: center;
+  padding: 55px;
+}
+.radsize {
+  background-color: red; /*For browser that does not support gradient*/
+  background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+</style>
+</head>
+
+<body>
+<h2>Linear Gradient</h2>
+<h3>Direction - Top to Bottom (default)</h3>
+<div class="ex1">
+  background-image: linear-gradient(red, yellow);
+</div>
+
+<h3>Direction - Left to Right</h3>
+<div class="ex2">
+  background-image: linear-gradient(to right, red, yellow);
+</div>
+
+<h3>Direction - Top Left to Bottom Right</h3>
+<div class="ex3">
+  background-image: linear-gradient(to bottom right, red, yellow);
+</div>
+
+<h3>Direction - Using angle</h3>
+<div class="ex4">
+  background-image: linear-gradient(0deg, red, yellow);
+</div>
+
+<h3>Multicolor</h3>
+<div class="ex5">
+  background-image: linear-gradient(red, yellow, green);
+</div><br>
+<div class="rainbow">
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+</div>
+
+<h3>Repeating a linear-background</h3>
+<div class="repeat">
+  background-image: repeating-linear-gradient(to right, red, yellow 10%, green 20%);
+</div><br>
+<div class="repeat45">
+  background-image: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
+</div><br>
+<div class="repeat190">
+  background-image: repeating-linear-gradient(190deg, red, yellow 10%, green 20%);
+</div><br>
+
+<h2>Radial Gradient</h2>
+<h3>Evenly spaced color stop (default)</h3>
+<div class="rad">
+  background-image: radial-gradient(red, yellow, green);
+</div>
+
+<h3>Differently spaced color stop</h3>
+<div class="raddif">
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+</div>
+
+<h3>Set Shape</h3>
+<div class="radshape">
+  background-image: radial-gradient(circle, red, yellow, green);
+</div>
+
+<h3>Repeating a radial-gradient</h3>
+<div class="radrepeat">
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+</div>
+
+<h3>Different size keywords</h3>
+<form>
+  <input type="radio" id="size1" name="size" value="size1" checked onclick="sizeClick1()">
+  <label for="size1">Closest-side at 60%, 55%</label>
+  <input type="radio" id="size2" name="size" value="size2" onclick="sizeClick2()">
+  <label for="size2">Farthest-side at 60%, 55%</label>
+  <input type="radio" id="size3" name="size" value="size3" onclick="sizeClick3()">
+  <label for="size3">Closest-corner at 60%, 55%</label>
+  <input type="radio" id="size4" name="size" value="size4" onclick="sizeClick4()">
+  <label for="size4">Farthest-corner at 60%, 55%</label>
+</form>
+<div class="radsize" id="radsize"></div>
+
+<script>
+var size = document.getElementById("radsize");
+function sizeClick1() { size.style.backgroundImage = "radial-gradient(closest-side at 60% 55%, red, yellow, black)"; }
+function sizeClick2() { size.style.backgroundImage = "radial-gradient(farthest-side at 60% 55%, red, yellow, black)"; }
+function sizeClick3() { size.style.backgroundImage = "radial-gradient(closest-corner at 60% 55%, red, yellow, black)"; }
+function sizeClick4() { size.style.backgroundImage = "radial-gradient(farthest-corner at 60% 55%, red, yellow, black)"; }
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Layout - The position Property</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Layour - The position Property">
+<meta name="keywords" content="static, relative, fixed, absolute, sticky">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<style>
+span {
+  background-color:#ddd;
+  color: red;
+}
+div {
+  border: 3px solid green;
+  margin: 10px auto;
+  max-width: 600px;
+
+}
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:white;
+  width: 100px;
+  text-align: center;
+}
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color:white;
+  width: 100px;
+  text-align: center;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color:white;
+  width: 100px;
+  text-align: center;
+}
+.bottomright{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color:white;
+  width: 100px;
+  text-align: center;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color:white;
+  width: 100px;
+  text-align: center;
+}
+img.overlap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+div.static {
+  position: static;
+}
+div.relative {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+div.absolute {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+div.sticky {
+  position: sticky;
+  top: 0;
+}
+</style>
+</head>
+<body>
+<ol type="I">
+<h3><li>Position div block</li></h3>
+<p>Make the text at different position of the image</p>
+<div style="position:relative">
+  <img src="img_5terre_wide.jpg" width="600px" height="200px">
+  <div class="topleft">Top left</div>
+  <div class="topright">Top right</div>
+  <div class="bottomleft">Bottom left</div>
+  <div class="bottomright">Bottom right</div>
+  <div class="center">Center</div>
+</div>
+
+<h3><li>Overlapping Elements</li></h3>
+<div style="position:relative">
+  <h1>This is a heading</h1>
+  <img class="overlap" src="w3schools_logo.gif" width="600px" height="115px">
+  <p>Because the image has a z-index of -1, it will be placed behind he text.</p>
+</div>
+
+<h3><li>Position Properties</li></h3>
+<ul>
+  <li><span>Position: static</span> - default: positioned base on normal flow of the page, not affected by top, bottom, left, right properties</li>
+  <li><span>Position: relative</span> - adjust relative position from its normal(default) position by setting top, bottom, left, right properties</li>
+  <li><span>Position: fixed</span> - Fixed element when scrolling, its position is set by top, bottom, left, right properties</li>
+  <li><span>Position: absolute</span> - adjust relative position from its ancesstor position by setting top, bottom, left, right properties. If it have no ancestor, it will use  the document body</li>
+  <li><span>Position: sticky</span> - toggles between <span>relative</span> and <span>fixed</span> - <span>relative</span> until a given offset position is met in the viewport - then it sticks in place like <span>fixed</span></li>
+</ul>
+
+<div class="static">The &ltdiv&gt element has <span>position: static</span></div>
+<div class="relative">The &ltdiv&gt element has <span>position: relative</span></div>
+<div class="relative" style="height:50px">The &ltdiv&gt element has <span>position: relative</span>
+  <div class="absolute">The &ltdiv&gt element has <span>position: absolute</span></div>
+</div>
+<div class="fixed">The &ltdiv&gt element has <span>position: fixed</span></div>
+
+<p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+
+<div class="sticky">I am sticky!</div>
+
+<div style="padding-bottom:2000px">
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+</ol>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Pseudo Element</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Pseudo Element">
+<meta name="keywords" content="first-line, first-letter, before, after, marker, selection">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+span {
+  background-color: lightgrey;
+  color: red;
+}
+p.firstline::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+p.firstletter::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}
+p.before::before {
+  content: url(smiley.gif);
+}
+p.after::after {
+  content: url(smiley.gif);
+}
+.ex li::marker {
+  color: red;
+  font-size: 23px;
+}
+::selection {
+  color: red;
+  background: yellow;
+  cursor: crosshair;
+  outline: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<p>A CSS pseudo-element is used to style specified parts of an element.</p>
+<ol type="I">
+<h3><li>The <span>::first-line</span> Pseudo-element</li></h3>
+<p>The <span>::first-line</span> pseudo-element is used to add as special style to the first line of a text.</p>
+<p class="firstline">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even ,more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+<h3><li>The <span>::first-letter</span> Pseudo-element</li></h3>
+<p>The <span>::first-letter</span> pseudo-element is used to add a special style to the first letter of a text.</p>
+<p class="firstletter">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+<h3><li>The <span>::before</span> & <span>::after</span> Pseudo-element</li></h3>
+<p>The <span>::before</span> pseudo-element can be used to insert some content before the content of an element.</p>
+<p class="before">This is text with <span>::before</span><br><br><br
+<p>The <span>::after</span> pseudo-element can be used to insert some content after the content of an element.</p>
+<p class="after">This is text with <span>::after</span>
+
+<h3><li>The <span>::marker</span> Pseudo-element</li></h3>
+<p>The <span>::marker</span> pseudo-element selects the markers of list items.</p>
+<ul class="ex">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<ol class="ex">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+
+<h3><li>The <span>::selection</span> Pseudo-element</li></h3>
+<p>The <span>::selection</span> pseudo-element matches the protion of an element that is selected by a user.</p>
+<p>The following can be applied to </span>::selection</span>: <span>color</span>, <span>background</span>, <span>cursor</span> and <span>outline</span>.</p>
+<p>Select some text to see the difference</p>
+
+<h3><li>All pseudo-elements</li></h3>
+<img src="img_pseudoelement.png" alt="pseudo-elements.jpg" width="900px">
+
+</ol>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<Title>Layout</title>
+
+<base href="img/" target="_blank">
+
+<meta charset="UTF-8">
+<meta name="keywords" content="display, visibility">
+<meta name="description" content="CSS Layout">
+<meta name="viewport" content="width=device-width", initial-scale=1.0">
+
+<style>
+.div1 {
+
+}
+.div1 ul li { display:inline; list-style-type: none;}
+.div1 a { 
+  background-color:RGBA(255,0,0,0.6);
+  padding: 10px;
+}
+.div1 a:hover{ background-color:red;}
+
+.div2 { display:inline-block;}
+.div2 p {
+  color: red;
+  background-color:#dddddd;
+}
+</style>
+</head>
+
+<body>
+<ol type="I">
+<h3><li>Display a list of links as a horizaontal menu</li></h3>
+<div class="div1">
+<ul>
+  <li><a href="html">HTML</a></li>
+  <li><a href="css">CSS</a></li>
+  <li><a href="JavaScript">JavaScript</a></li>
+</ul>
+</div>
+
+<h3><li>Hide an Element - display:none or visibility:hidden</li></h3>
+<div style="text-align:center; border:1px solid black;padding:10px;">
+  <div class="div2" id="remove">
+    <p>Display:none</p>
+    <img src="img_5terre.jpg" alt="5terre.jpg" style="width:200px;height:200px;"><br>
+    <button type="button" onclick="remove()" style="width:200px;">Remove</button><br>
+  </div>
+  <div class="div2" id="hide">
+    <p>Visibility:hidden</p>
+    <img src="img_5terre.jpg" alt="5terre.jpg" style="width:200px;height:200px;"><br>
+    <button type="button" onclick="hide()" style="width:200px;">Hide</button><br>
+  </div>
+  <div class="div2">
+    <p>Reset</p>
+    <img src="img_5terre.jpg" alt="5terre.jpg" style="width:200px;height:200px;"><br>
+    <button type="button" onclick="reset()" style="width:200px;">Reset All</button><br>
+  </div>
+
+</div>
+</ol>
+
+<script>
+function remove()
+{
+  var x = document.getElementById("remove");
+  x.style.display = "none";
+}
+function hide()
+{
+  var x = document.getElementById("hide");
+  x.style.visibility = "hidden";
+}
+function reset()
+{
+  var x = document.getElementById("remove");
+  x.style.display = "inline-block";
+  
+  var y = document.getElementById("hide");
+  y.style.visibility = "initial";
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Units</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Units">
+<meta name="keywords" content="absolute lengths, relative lengths">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table {
+  border: 1px solid #888;
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border-bottom: 1px solid #888;
+  padding: 5px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+
+<body>
+<h2>Absolute Lengths</h2>
+<p>The absolute length units aree fixed and a length expressd in any of these wil apear as exactly that size.</p>
+<p>Absolute length units are not recommendd for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.<p>
+<table>
+  <tr>
+    <th>Unit</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>cm</td>
+    <td>centimeters</td>
+  </tr>
+  <tr>
+    <td>mm</td>
+    <td>milliimeters</td>
+  </tr>
+  <tr>
+    <td>in</td>
+    <td>inches (1in = 96px = 2.54cm)</td>
+  </tr>
+  <tr>
+    <td>px*</td>
+    <td>pixels (1px = 1/96th of 1in)</td>
+  </tr>
+  <tr>
+    <td>pt</td>
+    <td>points (1pt = 1/73 of 1 in</td>
+  </tr>
+  <tr>
+    <td>pc</td>
+    <td>picas (1pc = 12pt)</td>
+  </tr>
+</table>
+<p>*Pixels (px) are relative to the viewing device. For low-dpi devices, 1 px is one device pixel (dot) of the display. For printer and high resolution screens 1px implies multiple device pixels</p>
+
+<h2>Relative Lengths</h2>
+<p>Relative length units specify a length relative to anotehr length property. Relative length units scales better etween different rendering mediums.</p>
+<table>
+  <tr>
+    <th>Unit</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>em</td>
+    <td>Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
+  </tr>
+  <tr>
+    <td>ex</td>
+    <td>Relative to the x-height of the current font (rarely used)</td>
+  </tr>
+  <tr>
+    <td>ch</td>
+    <td>Relative to width of the character "0" (zero)</td>
+  </tr>
+  <tr>
+    <td>rem</td>
+    <td>Relative to font-size of the root element</td>
+  </tr>
+  <tr>
+    <td>vw</td>
+    <td>Relative to 1% of the width of the viewport*</td>
+  </tr>
+  <tr>
+    <td>vh</td>
+    <td>Relative to 1% of the height of the viewport*</td>
+  </tr>
+  <tr>
+    <td>vmin</td>
+    <td>Relative to 1% of viewport's* smaller dimension (1vmin = 1vw or 1vh, whichever is smaller)</td>
+  </tr>
+  <tr>
+    <td>vmax</td>
+    <td>Relative to 1% of viewport's* larget dimension (1vmax = 1vw or 1vh, whichever is bigger)</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>Relative to the parent element</td>
+  </tr>
+</table>
+<p style="background-color:lightyellow; padding: 15px;"><strong>Tip:</strong> The em and rem units are practical in creating perfectly scalable layout!<br>
+*Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm/
+</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Rounded Corner</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="border-radius, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius">
+<meta name="description content="CSS Rounded Corner">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+div {
+  width: 100px;
+  height: 80px;
+  padding: 20px;
+  background-color: green;
+  margin-bottom: 10px;
+}
+div.fourvalue {
+  border-radius: 15px 50px 30px 5px;
+}
+div.threevalue {
+  border-radius: 15px 50px 30px;
+}
+div.twovalue {
+  border-radius: 15px 50px;
+}
+div.onevalue {
+  border-radius: 15px;
+}
+div.elip1 {
+  border-radius: 15px / 50px;
+}
+div.elip2 {
+  border-radius: 50px / 15px;
+}
+div.elip3 {
+  border-radius: 50%;
+}
+</style>
+</head>
+
+<body>
+<div class="fourvalue"></div>
+<div class="threevalue"></div>
+<div class="twovalue"></div>
+<div class="onevalue"></div>
+<div class="elip1"></div>
+<div class="elip2"></div>
+<div class="elip3"></div>
+</body>
+</html>

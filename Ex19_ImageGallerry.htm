@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Image Gallery</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Image Gallery">
+<meta name="keywords" content="float, responsive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+p {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  box-shadow: 3px 3px 3px 3px RGBA(0,0,0,0.2);
+  padding: 5px;
+}
+.gallery {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media screen and (max-width: 900px) {
+  .gallery {  width: 50%; }
+}
+@media screen and (max-width: 400px) {
+  .gallery {  width: 100%; }
+}
+</style>
+</head>
+<body>
+<h2 style="text-align: center">Responsive Image Gallery</h2>
+<div class="clearfix">
+  <div class="gallery">
+    <a href="img_5terre.jpg">
+      <img src="img_5terre.jpg" alt="5ttere.jpg" width="100%">
+      <p>5ttere</p>
+    </a>
+  </div>
+  <div class="gallery">
+    <a href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="5ttere.jpg" width="100%">
+      <p>Forest</p>
+    </a>
+  </div>
+  <div class="gallery">
+    <a href="img_lights.jpg">
+      <img src="img_lights.jpg" alt="5ttere.jpg" width="100%">
+      <p>Lights</p>
+    </a>
+  </div>
+  <div class="gallery">
+    <a href="img_mountains.jpg">
+      <img src="img_mountains.jpg" alt="5ttere.jpg" width="100%">
+      <p>Mountains</p>
+    </a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Counters</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Counters">
+<meta name="keywords" content="counter-reset, counter-increment, content, counter(), counters()">
+<meta name="viewport" content="width=device-width, initial-value=1.0">
+<style>
+span { 
+  background-color: lightgray;
+  color: red;
+}
+.ex1 div {
+  counter-reset: section;
+}
+.ex1 p::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+.ex2 div.section {
+  counter-reset: section;
+}
+.ex2 div.subsection {
+  counter-reset: subsection;
+}
+.ex2 div.subsection::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+.ex2 p::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) ". ";
+}
+.ex3 ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+.ex3 li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+}
+</style>
+</head>
+
+<body>
+<ol type="I">
+<h3><li>Automatic numbering with counters</li></h3>
+<p>CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).</p>
+<p>To work with CSS counters we will use the following properties:</p>
+<ul>
+  <li><span>counter-reset</span> - Creats or reset or counter</li>
+  <li><span>counter-increment</span> - Increments a counter value</li>
+  <li><span>content</span> - Inserts generate content</li>
+  <li><span>counter</span> or <span>counters</span> function - Adds the balue of a counte to an element</li>
+</ul>
+
+<h3><li>Example 1 - Basic counters</li></h3>
+<div class="ex1">
+  <div>First</div>
+  <p>This is 1</p>
+  <p>This is 2</p>
+  <p>This is 3</p>
+
+  <div>Second</div>
+  <p>This is 1</p>
+  <p>This is 2</p>
+</div>
+
+<h3><li>Example 2 - Nesting counters</li></h3>
+<div class="ex2">
+  <div class="section"></div>
+  <div class="subsection">HTML Tutorials</div>
+  <p>HTML</p>
+  <p>CSS</p>
+  <div class="subsection">Scripting Tutorials</div>
+  <p>JavaScript</p>
+  <p>VBScript</p>
+  <div class="subsection">XML Tutorials</div>
+  <p>XML</p>
+  <p>XSL</p>
+</div>
+
+<h3><li>Example 3 - Counters with List</li></h3>
+<div class="ex3">
+<ol>
+  <li>item</li>
+  <li>item
+    <ol>
+      <li>item</item>
+      <li>item</item>
+      <li>item
+        <ol>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ol>
+      </li>
+      <li>item
+    </ol>
+  </li>
+  <li>item</li>
+  <li>item</li>
+</ol>
+</div>
+</body>
+</html>

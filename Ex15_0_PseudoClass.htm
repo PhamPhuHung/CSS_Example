@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Pseudo-classes</title>
+<base href="img/ target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Pseudo-Classes">
+<meta name="keywords" content="hover, first-child, lang, focus">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+p.ex1 {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+.div1:hover p.ex1 {
+  display: block;
+}
+
+.div2 p:first-child { color: blue; }
+
+q:lang(no) {
+  quotes: "~" "~";
+}
+input {
+  display: block;
+}
+input:focus {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<p>A pseudo-class is used to define a special state of an element</p>
+<ol type="I">
+<h3><li>Hover for &ltdiv&gt element</li></h3>
+<div class="div1">Hover over me to show the &ltp&gt element
+  <p class="ex1">Tada! Here I am!</p>
+</div>
+
+<h3><li>First-child</li></h3>
+<div class="div2">
+  <p>I am 1<sup>st</sup> child</p>
+  <p>I am 2<sup>nd</sup> child</p>
+  <p>I am 3<sup>rd</sup> child</p>
+  <p>I am 4<sup>th</sup> child</p>
+</div>
+
+<h3><li>Lang</li></h3>
+<p>Some text <q lang="no">A quote in a paragraph</q> Som text.</p>
+
+<h3><li>Focus</li></h3>
+<p>Focus and lose focus in this text box to see the difference.</p>
+<input type="text">
+
+<h3><li>All Pseudo-classes</li></h3>
+<img src="img_pseudoclass.png" width=900px; alt="pseudoclasses.jpg">
+</div>
+</ol>
+</body>
+
+</body>
+</html>

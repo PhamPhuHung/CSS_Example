@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Specificity</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="*, element name, pseudo-element, attribute, class, pseudo-class, style attribute ">
+<meta name="description content="CSS Specificity">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#myid { color: red;}
+.myclass { color: blue;}
+div { color: darkgray !important}
+</style>
+</head>
+
+<body>
+<h2>Specificity Hierachy</h2>
+<p> 4 categories which define the specfificity level of a selector:</p>
+<p><strong>0. *</strong>
+<p><strong>1. Elements, pseudo-elements</strong> - element name (h1), pseudo-element (::before, ::after)</p>
+<p><strong>10. Classes, attributes, pseudo-classes</strong> - .classes, [attributes], pseudo-class (:hover, :focus)</p>
+<p><strong>100. IDs</strong> - a unique identifier for page elements</p>
+<p><strong>1000. Inline styles</strong> - attached diretly to the element to be styled</p>
+
+<h2>Calculate Specficity</h2>
+<p> * -> 0;
+<p> h1, h1:last-child -> 1. If equal, the latest specification is used.</p>
+<p> .ex1 -> 10, h1.ex1 -> 11
+<p> #ex1 -> 100, #ex1 h1 -> 101
+<p> &lth1 style="color:red"%gt -> 1000
+
+<h2>!Important</h2>
+<div id="myid">This is some text in div</div>
+<div class="myclass">This is some text in div</div>
+<div>This is some text in div</div>
+
+<p>If more than 1 rules use !important -> calculate specificity</p>
+</body>
+</html>

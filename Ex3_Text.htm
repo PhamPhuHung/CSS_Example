@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Text</title>
+
+<base href="img/" target="_blank">
+
+<meta charset="UTF-8"">
+<meta name="description" content="CSS Text element">
+<meta name="viewport" content="border-width=device-border-width;initial-scale=1.0">
+
+<style>
+div p { 
+  border: 1px solid black;
+  padding:10px;
+}
+.div1 {
+
+}
+.div1 p.left { text-align:left; }
+.div1 p.right { text-align:right; }
+.div1 p.center { text-align:center; }
+.div1 p.justify { 
+  text-align: justify; 
+  width:200px;
+  height:200px;
+  padding:10px;
+}
+.div2 {
+
+}
+.div2 p.ex { 
+  direction:rtl;
+  unicode-bidi:bidi-override;
+}
+
+.div3 {
+
+}
+.div3 img.top { vertical-align:top; }
+.div3 img.middle { vertical-align:middle; }
+.div3 img.bottom { vertical-align:bottom; }
+
+.div4 {
+
+}
+.div4 p.overline { text-decoration: overline; }
+.div4 p.linethrough { text-decoration:line-through; }
+.div4 p.underline {text-decoration:underline; }
+.div4 a.none {text-decoration:none; }
+
+.div5 {
+
+}
+.div5 p.upper { text-transform:uppercase; }
+.div5 p.lower { text-transform:lowercase; }
+.div5 p.capital { text-transform:capitalize; }
+
+.div6 {
+ 
+}
+.div6 p.textindent50 { text-indent:50px; }
+.div6 p.textindent20 { text-indent:20px; }
+.div6 p.letterspacing3 { letter-spacing:3px; }
+.div6 p.letterspacingminus3 { letter-spacing:-3px; }
+.div6 p.lineheightsmall { line-height:0.5; }
+.div6 p.lineheightbig { line-height:2; }
+.div6 p.wordspacing10 { word-spacing:10px; }
+.div6 p.wordspacingminus5 { word-spacing:-5px; }
+
+.div7 {
+
+}
+.div7 p { font-size:150%; }
+.div7 p.shadow2px2px { text-shadow:2px 2px; }
+.div7 p.shadow2px2pxred { text-shadow:2px 2px red; }
+.div7 p.shadow2px2px5pxred { text-shadow:2px 2px 5px red; }
+</style>
+</head>
+
+<body>
+<ol type="I">
+<h2><li>DIFFERENT TEXT ALIGN</li></h2>
+<div class="div1">
+  <p class="left">This text is align left</p>
+  <p class="right">This text is align right</p>
+  <p class="center">This text is align center</p>
+  <p class="justify">This pararagh is align justify:<br>
+    In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. "Whereever you feel like criticizing anyone." he told me, "just remember that all the people in this world haven't had the advantages that you've had.".</p>
+</div>
+
+<h2><li>TEXT DIRECTION</li></h2>
+<div class="div2">
+  <p>This is the default text</p>
+  <p class="ex">This is the default text</p>
+</div>
+
+<h2><li>VERTICAL ALIGNMENT</h2></li>
+<div class="div3">
+  <p>An <img src="w3schools_logo.gif" alt="W3schools" width="270" height="50"> image with a default alignment</p>
+  <p>An <img class="top" src="w3schools_logo.gif" alt="W3schools" width="270" height="50"> image with a default alignment</p>
+  <p>An <img class="middle" src="w3schools_logo.gif" alt="W3schools" width="270" height="50"> image with a default alignment</p>
+  <p>An <img class="bottom"src="w3schools_logo.gif" alt="W3schools" width="270" height="50"> image with a default alignment</p>
+</div>
+
+<h2><li>TEXT DECORATION</li></h2>
+<div class="div4">
+  <a class="none">A link without underline</a><br>
+  <p class="overline">An overline text</p>
+  <p class="linethrough">A line-through text</p>
+  <p class="underline">An underline text</p>
+</div>
+
+<h2><li>TEXT TRANSFORMATION</li></h2>
+<div class="div5">
+  <p class="upper">An uppercase text</p>
+  <p class="lower">An lowercase text</p>
+  <p class="capital">An capitalize text</p>
+</div>
+
+<h2><li>SPACING</li></h2>
+<div class="div6">
+  <p class="textindent50">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. "Whenver you feel like criticizing anyone", he told me, "just remember that all the people in this world haven't had the advantages that you've had."<br>
+  <span style="text-align:right;color:red;display:block;">(Text-indent = 50px)</span></p>
+
+  <p class="textindent20">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. "Whenever you feel like criticizing anyone.", he told me, "just rememver that all the people in this world haven't had the advantages that you've had."<br>
+  <span style="text-align:right;color:red;display:block;">(Text-indent = 20px)</span></p>
+
+  <p class="letterspacing3">This is pararagh with letter spacing 3px</p>
+
+  <p class="letterspacingminus3">This is pararagh with letter spacing -3px</p>
+
+  <p>This is a paragraph with a standard line-height.<br>
+  The fefault line height in most browsers is about 110% to 120%</p>
+
+  <p class="lineheightsmall">This is a paragraph with a smaller line-height (0.5)<br>
+  This is a paragraph with a smaller line-height (0.5)</p>
+
+  <p class="lineheightbig">This is a paragraph with a bigger line-height (2)<br>
+  This is a paragraph with a bigger line-height (2)</p>
+
+  <p class="wordspacing10">This is a paragraph with word-spacing 10px</p>
+  <p class="wordspacingminus5">This is a pararagh with word-spacing -5px"</p>
+
+  <p style="white-space:nowrap">White-space = nowrap<br>
+  This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. </p>
+
+<h2><li>TEXT SHADOW</li></h2>
+<div class="div7">
+  <p class="shadow2px2px">Text shadow effect: horizontal 2px, vertical 2px</p>
+  <p class="shadow2px2pxred">Text shadow effect: horizontal 2px, vertical 2px, red color</p>
+  <p class="shadow2px2px5pxred">Text shadow effect: horizontal 2px, vertical 2px, blur 5px, red color</p>
+</div>
+
+</div>
+</ol>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Image Sprites</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Image Sprites">
+<meta name="keywords" content="background">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img { margin: 0; height: 44px;}
+#home {
+  left: 0;
+  width: 46px;
+  background: url(img_navsprites_hover.gif) 0 0;
+}
+#next {
+  left: 63px;
+  width: 43px;
+  background: url(img_navsprites_hover.gif) -47px 0;
+}
+#back {
+  left: 129px;
+  width: 43px;
+  background: url(img_navsprites_hover.gif) -91px 0;
+}
+#navlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#navlist li {
+  float: left;
+  height: 44px;
+  margin-right: 10px;
+}
+#navlist li a {
+  display: block;
+  height: 44px;
+}
+#home a:hover {   background: url('img_navsprites_hover.gif') 0 -45px; }
+#next a:hover {   background: url('img_navsprites_hover.gif') -47px -45px; }
+#back a:hover {   background: url('img_navsprites_hover.gif') -91px -45px; }
+
+</style>
+</head>
+<body>
+<h2>Image Sprites</h2>
+<p>A image sprite is a collection of image put into a single image.<p>
+<p>A web page with many images can take a long time to load and generates multiple server requests.</p>
+<p>Using image sprites will reduce the number of server requests and save bandwidth.</p>
+<h2>Simple example</h2>
+<p>Instead of using 3 separate iimages, we use this single imge ("img_navsprites.gif")</p>
+<p>With CSS, we can show just the part of the image we need</p>
+<img id="home" src="img_trans.gif" width="1" height="1">
+<img id="next" src="img_trans.gif" width="1" height="1">
+<img id="back" src="img_trans.gif" width="1" height="1">
+<h2>Navigation link with hover effect</h2>
+<ul id="navlist">
+  <li id="home"><a href="#home"></a></li>
+  <li id="next"><a href="#next"></a></li>
+  <li id="back"><a href="#back"></a></li>
+</ul>
+</div>
+</body>
+</html>

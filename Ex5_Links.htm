@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Link</title>
+
+<base href="img/" target="_blank">
+
+<meta charset="UTF-8">
+<meta name="description" content="Link">
+<meta name="keywords" content="link, visited, hover, active">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+div {
+  border: 1px solid black;
+  padding 10px;
+  margin: 10px;
+}
+.div1 a{
+  
+  target:_blank;
+  padding:10px 20px;
+  margin:10px 10px;
+  display:inline-block;
+  
+}
+.div1 a.normal {}
+.div1 a.normal:link { color: black;}
+.div1 a.normal:visited { color:green;}
+.div1 a.normal:hover, a.normal:active { color:blue;}
+
+.div1 a.noUnderline { text-decoration:none;}
+.div1 a.noUnderline:link, a.noUnderline:visited { color:green;}
+.div1 a.noUnderline:hover { text-decoration:underline;}
+
+.div1 a.whitebutton {
+  text-decoration:none;
+  border: 2px solid green;
+  background-color:white;
+}
+.div1 a.whitebutton:hover { 
+  background-color:green;
+  color:white;
+}
+
+.div1 a.redbutton {
+  background-color:RGBA(255,0,0,0.6);
+  color:white;
+  text-decoration:none;
+}
+.div1 a.redbutton:hover { background-color:red;}
+
+div2 a{
+  
+  target:_blank;
+  padding:10px 20px;
+  margin:10px 10px;
+  display:block;
+  
+}
+.div2 a.changecolor:link { color:red;}
+.div2 a.changecolor:visited { color:blue;}
+.div2 a.changecolor:hover { color:#ffcc00;}
+
+
+.div2 a.changefontsize:link { color:red;}
+.div2 a.changefontsize:visited { color:blue;}
+.div2 a.changefontsize:hover { font-size:150%;}
+
+
+.div2 a.changebackgroundcolor:link { color:red;}
+.div2 a.changebackgroundcolor:visited { color:blue;}
+.div2 a.changebackgroundcolor:hover { background-color:#66ff66;}
+
+
+.div2 a.changefontfamily:link { color:red;}
+.div2 a.changefontfamily:visited { color:blue;}
+.div2 a.changefontfamily:hover { font-family:monospace;}
+
+
+.div2 a.changetextdecoration:link { color:red; text-decoration:none}
+.div2 a.changetextdecoration:visited { color:blue; text-decoration:none}
+.div2 a.changetextdecoration:hover { text-decoration:underline}
+</style>
+</head>
+
+<body>
+<p> When setting the style for several link stated, there are some order rules:
+<ul>
+  <li>a:hover MUST come after a:link and a:visited</li>
+  <li>a:active MUST come after a:hover</li>
+</ul>
+
+<div class="div1">
+  <a href="w3schools_logo.gif" target="_blank" class="normal">Text Link</a>
+  <a href="w3schools_logo.gif" target="_blank" class="noUnderline">Text Link</a>
+  <a href="w3schools_logo.gif" target="_blank" class="whitebutton">Text Link</a>
+  <a href="w3schools_logo.gif" target="_blank" class="redbutton">Text Link</a>
+</div>
+
+<br>
+
+<div class="div2">
+  <a href="w3schools_logo.gif" target="_blank" class="changecolor">Link change color</a><br>
+  <a href="w3schools_logo.gif" target="_blank" class="changefontsize">Link change font size</a><br>
+  <a href="w3schools_logo.gif" target="_blank" class="changebackgroundcolor">Link change background-color</a><br>
+  <a href="w3schools_logo.gif" target="_blank" class="changefontfamily">Link change font-family</a><br>
+  <a href="w3schools_logo.gif" target="_blank" class="changetextdecoration">Link change text-decoration</a><br>
+</div>
+
+<br>
+
+<div>
+  <p>This example demonstrates the different types of cursors (can be useful for links):</p>
+  <span style="cursor: auto">auto</span><br>
+  <span style="cursor: crosshair">crosshair</span><br>
+  <span style="cursor: default">default</span><br>
+  <span style="cursor: e-resize">e-resize</span><br>
+  <span style="cursor: help">help</span><br>
+  <span style="cursor: move">move</span><br>
+  <span style="cursor: n-resize">n-resize</span><br>
+  <span style="cursor: ne-resize">ne-resize</span><br>
+  <span style="cursor: nw-resize">nw-resize</span><br>
+  <span style="cursor: pointer">pointer</span><br>
+  <span style="cursor: progress">progress</span><br>
+  <span style="cursor: s-resize">s-resize</span><br>
+  <span style="cursor: se-resize">se-resize</span><br>
+  <span style="cursor: sw-resize">sw-resize</span><br>
+  <span style="cursor: text">text</span><br>
+  <span style="cursor: w-resize">w-resize</span><br>
+  <span style="cursor: wait">wait</span>
+</div>
+</body>
+</html>

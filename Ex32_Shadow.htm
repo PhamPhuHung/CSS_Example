@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Shadow</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="text-shadow, box-shadow">
+<meta name="description content="CSS Shadow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table, th, td { border: 1px solid #888; }
+table { width: 100%;border-collapse: collapse; }
+td { padding: 10px; margin: 10px; }
+h1 { text-align: center;}
+.ts22 { text-shadow: 2px 2px; }
+.ts22red { text-shadow: 2px 2px red; }
+.ts225red { text-shadow: 2px 2px 5px red; }
+.ts_white_black { color: white; text-shadow: 2px 2px 5px black; }
+.ts_multi_redblue { text-shadow: 0 0 3px red, 0 0 5px blue; }
+.ts_multi_blackdarkblueblue_white { color: white; text-shadow: 1px 1px 1px black, 0 0 5px darkblue, 0 0 25px blue; }
+.ts_border { color: orange; text-shadow: 1px 0 blue, 0 1px blue, -1px 0 blue, 0 -1px blue; }
+
+.bs1010 { background-color: yellow; box-shadow: 10px 10px; }
+.bs1010red { background-color: yellow; box-shadow: 10px 10px red; }
+.bs101020red { background-color: yellow; box-shadow: 10px 10px 20px red; }
+.card1 { 
+  box-shadow: 5px 5px 5px black;
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header1 {
+  background-color: green;
+  font-size: 40px;
+  color: white;
+  padding: 10px
+}
+.content1 {
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+<h2>Text-shadow</h2>
+<table>
+  <tr>
+    <td><h1 class="ts22">text-shadow: 2px 2px;</h1></td>
+    <td><h1 class="ts22red">text-shadow: 2px 2px red;</h1></td>
+  </tr>
+
+  <tr>
+    <td><h1 class="ts225red">text-shadow: 2px 2px 5px red;</h1></td>
+    <td><h1 class="ts_white_black">color: white;<br>text-shadow: 2px 2px 5px black;</h1></td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>Multi shadow</p>
+      <h1 class="ts_multi_redblue">text-shadow: 0 0 3px red, 0 0 5px blue;</h1>
+    </td>
+    <td>
+      <p>Multi shadow: black, darkblue, blue on white text</p>
+      <h1 class="ts_multi_blackdarkblueblue_white">color: white;<br> text-shadow: 1px 1px 1px black, 0 0 5px darkblue, 0 0 25px blue;</h1>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>Border around text</p>
+      <h1 class="ts_border">color: orange;<br> text-shadow: 1px 0 blue, 0 1px blue, -1px 0 blue, 0 -1px blue; </h1>
+    </td>
+    <td></td>
+  </tr>
+</table>
+<h2>Box-shadow</h2>
+<table>
+  <tr>
+    <td><div class="bs1010">background-color: yellow<br>box-shadow: 10px 10px;</div></td>
+    <td><div class="bs1010red">background-color: yellow<br>box-shadow: 10px 10px red;</div></td>
+  </tr>
+
+  <tr>
+    <td><div class="bs101020red">background-color: yellow<br>box-shadow: 10px 10px 20px red;</div></td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>Text card</p>
+      <div class="card1">
+        <div class="header1"><h1>1</h1></div>
+        <div class="content1"><p>January 1, 2016</p></div>
+      </div>
+    </td>
+    <td>
+      <p>Image card</p>
+      <div class="card1">
+        <img src="rock600x400.jpg" style="width: 100%;">
+        <div class="content1"><p>January 1, 2016</p></div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+     
+    </td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

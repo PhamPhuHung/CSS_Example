@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Tooltip</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Tooltip">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.basic {
+  position: relative;
+  border-bottom: 1px dotted black;
+  display: inline-block;
+}
+.basic_text {
+  position: absolute;
+  z-index: 1;
+  
+  visibility: hidden;
+  width: 120px;
+  display: inline-block;
+  border-radius: 6px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  text-align: center;
+}
+.basic:hover .basic_text{
+  visibility: visible;
+}
+
+.position {
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  position: relative;
+  padding: 5px 50px;
+  float: left;
+}
+.position_text {
+  position: absolute;
+  z-index: 1;
+
+  visibility: hidden;
+  width: 120px;
+  display: inline-block;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+.position:hover .position_text {
+  visibility: visible;
+}
+.position_left {
+  right: 105%;
+  transform: translate(55px, -5px);
+}
+.position_right {
+  left: 105%;
+  transform: translate(-55px, -5px);
+}
+.position_top {
+  bottom: 105%;
+  right: 50%;
+  transform: translate(60px, -5px);
+}
+.position_bottom {
+  top: 105%;
+  right: 50%;
+  transform: translate(60px, 5px);
+}
+
+/*Create Arrow*/
+.position_left::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.position_right::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.position_top::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.position_bottom::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+</style>
+</head>
+
+<body>
+<h2>Basic tooltip</h2>
+<div class="basic">Hover over me
+  <div class="basic_text">Tooltip text</div>
+</div>
+
+<h2>Positioning tooltips</h2>
+<div class="clearfix">
+  <div class="position">Hover over me to show right tooltip
+    <div class="position_text position_right">Tooltip right</div>
+  </div>
+  <div class="position">Hover over me to show left tooltip
+    <div class="position_text position_left">Tooltip left</div>
+  </div>
+  <div class="position">Hover over me to show top tooltip
+    <div class="position_text position_top">Tooltip top</div>
+  </div>
+  <div class="position">Hover over me to show bottom tooltip
+    <div class="position_text position_bottom">Tooltip bottom</div>
+  </div>
+</div>
+
+
+</body>
+</html>

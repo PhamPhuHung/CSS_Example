@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Forms</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Forms">
+<meta name="keywords" content="=, ~=, |=, ^=, $=, *= ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.padded input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.color input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #3cbc8d;
+  color: white;
+}
+.focus1 input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.focus1 input[type="text"]:focus {
+  border: 3px solid #555;
+}
+.focus2 input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.focus2 input[type="text"]:focus {
+  background-color: #3cbc8d;
+  color: white;
+}
+.icon input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  padding: 12px 20px 12px 40px;
+  background-repeat: no-repeat;
+}
+.animated input[type="text"] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  padding: 12px 20px 12px 40px;
+  background-repeat: no-repeat;
+
+  transition: width 0.4s ease-in-out;
+}
+.animated input[type="text"]:focus { width: 100%; }
+.menu select {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  padding: 16px 20px;
+}
+* {
+ box-sizing: border-box;
+}
+.res {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.res input[type="text"], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.res label {
+  padding: 12px 12px 12px 0px;
+  display: inline-block;
+}
+.res input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+.res input[type="submit"]:hover {
+  background-color: #45ao49;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+@media screen and (max-width:500px) {
+  .col-25, .col-75, .res input[type=submit] {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+</style>
+</head>
+<body>
+<ol type="I">
+<h3><li>Padded input</li></h3>
+<div class="padded">
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname" value="John">
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form>
+</div>
+
+<h3><li>Color input</li></h3>
+<div class="color">
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname" value="John">
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form>
+</div>
+
+<h3><li>Focus input</li></h3>
+<div class="focus1">
+  <form><input type="text" id="fname" name="fname" value="John"></form>
+</div>
+<div class="focus2">
+  <form><input type="text" id="fname" name="fname" value="John"></form>
+</div>
+
+<h3><li>Input with icon/image</li></h3>
+<div class="icon">
+  <form><input type="text" name="search" placeholder="Search.."> </form>
+</div>
+
+<h3><li>Input with icon/image</li></h3>
+<div class="animated">
+  <form><input type="text" name="search" placeholder="Search.."> </form>
+</div>
+
+<h3><li>Styled Select Menu</li></h3>
+<div class="menu">
+  <form>
+    <select id="country name="country">
+    <option value="au">Australia</option>
+    <option value="ca">Canada</option>
+    <option value="usa">USA</option>
+    </select>
+  </form>
+</div>
+
+<h3><li>Responsive Form</li></h3>
+<div class="res">
+  <form>
+  <div class="row">
+    <div class="col-25"><label for="fname">First name</label></div>
+    <div class="col-75"><input type="text" id="fname" name="fname"></div>
+  </div>
+  <div class="row">
+    <div class="col-25"><label for="lname">Last name</label></div>
+    <div class="col-75"><input type="text" id="lname" name="lname"></div>
+  </div>
+  <div class="row">
+    <div class="col-25"><label for="country">Country</label></div>
+    <div class="col-75"><select id="country" name="country">
+      <option value="au">Australia</option>
+      <option value="ca">Canada</option>
+      <option value="usa">USA</option>
+    </select></div>
+  </div>
+  <div class="row">
+    <div class="col-25"><label for="subject">Subject</label></div>
+    <div class="col-75"><textarea id="subject" name="subject">Write something..</textarea></div>
+  </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</ol>
+</body>
+</html>

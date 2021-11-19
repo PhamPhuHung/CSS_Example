@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Color Keywords</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="transparent, currentcolor, inherit">
+<meta name="description content="CSS Color Keywords">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: url("paper.gif") top left repeat;
+  color: red;
+}
+div.lightgreen {
+  background-color: lightgreen;
+  border: 2px solid black;
+  padding: 15px;
+  margin-top: 10px;
+}
+div.transparent {
+  background-color: transparent; 
+  border: 2px solid black;
+  padding: 15px;
+  margin-top: 10px;
+}
+.currentcolor1 {
+  color: blue;
+  border: 10px solid currentcolor;
+  padding: 15px;
+  margin-top: 10px;
+}
+.currentcolor2 {
+  color: currentcolor;
+  border: 10px solid currentcolor;
+  padding: 15px;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<h2>Transparent Background</h2>
+<div class="lightgreen">This div has a light green background.</div>
+<div class="transparent">This div has a transparent background.</div>
+
+<h2>Currentcolor</h2>
+<div class="currentcolor1">
+  color: blue;<br>
+  border: 10px solid currentcolor;
+</div>
+<div class="currentcolor2">
+  color: currentcolor;<br>
+  border: 10px solid currentcolor;
+</div>
+</body>
+</html>

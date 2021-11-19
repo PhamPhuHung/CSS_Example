@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Transistion</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Transition">
+<meta name="keywords" content="transition, transition-delay, transition-duration, transition-property, transition-timing-function">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+span {
+  background-color: lightgray;
+  color: red;
+}
+.width {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s;
+}
+.width:hover {
+  width: 300px;
+}
+
+.widthheight {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s, height 4s;
+}
+.widthheight:hover {
+  width: 300px;
+  height: 400px;
+}
+.widthheighttransform {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+.widthheighttransform:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotateZ(180deg);
+}
+</style>
+</head>
+
+<body>
+<h2>Width property transition (100px -> 300px by hover)</h2>
+<div class="width"></div>
+
+<h2>Width & Height property transition (width:100px->300px (2s), height: 100px->400px (4s) by hover)</h2>
+<div class="widthheight"></div>
+
+<h2>Width, Height & Transform property transition (width: 100px->300px, height: 100px->300px, rotateZ(180deg)</h2>
+<div class="widthheighttransform"></div>
+
+<h3>Transistion-timing-function</h3>
+<ul>
+  <li><span>ease</span> - slow start, then fast, then end slowly (defaut)</li>
+  <li><span>linear</span> - same speed from start to end</li>
+  <li><span>ease-in</span> - slow start</li>
+  <li><span>ease-out</span> - slow end</li>
+  <li><span>ease-in-out</span> - slow start, slow end</li>
+  <li><span>cubic-bezer(n,n,n,n)</span> - define your own value in a cubic bezier function</li>
+</ul>
+
+<h3>Transition-delay</h2>
+<p><span>transition-delay:1s</span>: Delay 1sec before starting</p>
+
+<h3>Transition specified detail and shorthand</h3>
+<p>Detail specify</p>
+<pre>
+  <span>transition-property</span>: width;
+  <span>transition-duration</span>: 2s;
+  <span>transition-timing-fuction</span>: linear;
+  <span>transition-delay</span>: 1s;
+</pre>
+<p>Shorthand specified</p>
+<pre> <span>transition</span>: width 2s linear 1s;</pre>
+</body>
+</html>

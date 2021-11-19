@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Layout - Float and Clear</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Layout - Float and Clear">
+<meta name="keywords" content="float (left, right, none, inherit), clear (none, left, right, both, inherit)">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+span {
+  background-color: lightgrey;
+  color: red;
+}
+div {
+  background-color: #ddd;
+  width: 100%;
+  height: 170px;
+  overflow: auto;
+}
+img {
+  width: 170px;
+  height: 170px;
+}
+img.left { float:left;}
+img.right { float: right;}
+img.none { float: none;}
+
+.clearfix { overflow: auto;}
+.div1 {
+  background-color: #ddd;
+  width: initial;
+  height: initial;
+  overflow: visible;
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+<ol type="I">
+  <h3><li>Float: right</li></h3>
+  <p><span>Left</span> - The elemnt floats to the left of its container</p>
+  <p>In this example, the image will float to the left in the paragraph, and the text in the paragraph will wrap around the image.</p>
+  <div>
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="left">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+  </div>
+
+  <h3><li>Float: right</li></h3>
+  <p><span>Right</span> - The element floats to the right of its container</p>
+  <div>
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="right">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor ...</p>
+  </div>
+
+  <h3><li>Float: none</li></h3>
+  <p><span>None</span> - Default. The element does not float</p>
+  <div>
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="none">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor ...</p>
+  </div>
+
+  <h3><li>Clear</li></h3>
+  <p><span>None</span> - Default. Allows flaoting elements on both sides.<p>
+  <p><span>Left</span> - No floating elements allowed on the left side.</p>
+  <p><span>Right</span> - No floating elements allowed on the right side</p>
+  <p><span>Both</span> - No floating elements allowed on either the left or the right side.</p>
+  <p><span>Inherit</span> - The element inherits the value of its parent</p>
+  <br>
+  <p>The following is <span>Clear: right</span> in the <span>&ltp&gt</span></p>
+  <div>
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="right">
+    <p style="clear: right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices ...</p>
+  </div>
+
+  <h3><li>Clearix hack</li></h3>
+  <p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+  <div class="div1">
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="right">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae ...
+  </div>
+  <br><br><br><br><br><br>   
+  <p>Add a clearfix class with overflow: auto; to the containing element, to fix this problem.</p>
+  <div class="clearfix">
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="right">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae ...
+  </div>
+</body>
+</html>

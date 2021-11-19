@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="us-EN">
+<head>
+<title>CSS Float examples</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Float examples">
+<meta name="keywords" content="Grid of Boxes, Equal height Boxes, Navigation Menu, Web Layout example">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.boxof3 {
+  float: left;
+  width: 33.33%; /* 3 boxes */
+  padding: 50px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.imgof3 {
+  float: left;
+  width: 33%; /*3 boxes*/
+  padding: 5px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+.flex-container .box {
+  background-color: #f1f1f1;
+  width: 50%; /* 2 boxes */
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul li a:hover {
+  background-color: #111;
+}
+ul li a:active {
+  background-color: green;
+}
+
+.active {
+  background-color: red;
+}
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.menu li {
+  float: none;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+</style>
+</head>
+
+<body>
+<ol type="I">
+  <h3><li>Grid of boxes</li></h3>
+  <p>Float boxes side by side:</p>
+  <div class="clearfix">
+    <div class="boxof3" style="background-color:#bbb">
+      <p>Some text inside the box</p></div>
+    <div class="boxof3" style="background-color:#ccc">
+      <p>Some text inside the box</p></div>
+    <div class="boxof3" style="background-color:#ddd">
+      <p>Some text inside the box</p></div>  
+    <p>Note that also use the clearfix hack to take care of the layout flow.</p>
+  </div>
+
+  <h3><li>Image size by side</li></h3>
+  <p>Float boxes side by side:</p>
+  <div class="clearfix">
+    <img class="imgof3" src="img_5terre.jpg">
+    <img class="imgof3" src="img_forest.jpg">
+    <img class="imgof3" src="img_mountains.jpg">
+  </div>
+
+  <h3><li>Equal height Boxes</li></h3>
+  <p>Note: Flexbox is not supported in Internet Explorer 10 or earlier</p>
+  <div class="flex-container">
+    <div class="box">Box 1 - This is some text to make sure that the content gets really tall. THis is some text to make sure that the content gets really tall.</div>
+    <div class="box">Box2 - My height will follow Box 1.</div>
+  </div>
+
+  <h3><li>Navigation Menu</li></h3>
+  <ul>
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
+  <h3><li>Web Layout Example</li></h3>
+  <h2 class="header">Chania</h2>
+  <div class="clearfix">
+    <div class="column menu">
+      <ul>
+        <li onclick="flightClick()">The Flight</li>
+        <li onclick="cityClick()">The City</li>
+        <li onclick="islandClick()">The Island</li>
+        <li onclick="foodClick()">The Food</li>
+      </ul>
+    </div>
+    <div class="column content">
+      <div id="city">
+        <h2>The city</h2>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.<br>
+        You will learn more about web layout and responsive web pages in a later chapter.</p>
+      </div>
+
+      <div id="flight" style="display:none">
+        <h2>The flight</h2>
+        <p>Flight is the process by which an object mvoves through a space without contact any planetary surface, either within an atmosphere.<br>
+        You will learn more about web layout and responsive web pages in a later chapter.</p>
+      </div>
+
+      <div id="island" style="display:none">
+        <h2>The island</h2>
+        <p>Phú Quốc is the largest island in Vietnam. Phú Quốc and nearby islands, alongwith the distant Thổ Chu Island, are part of Kiên Giang Province.<br>
+        You will learn more about web layout and responsive web pages in a later chapter.</p>
+      </div>
+
+      <div id="food" style="display:none">
+        <h2>The food</h2>
+        <p>Pastak is a type of food typically made from an unleavded dough of wheat flour mixed with water or eggs, and formed into sheets or other shapes, then cooked by boiling or baking.<br>
+        You will learn more about web layout and responsive web pages in a later chapter.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="footer">Footer text</h2>
+</ol>
+
+<script>
+var x1 = document.getElementById("flight");
+var x2 = document.getElementById("city");
+var x3 = document.getElementById("island");
+var x4 = document.getElementById("food");
+function flightClick() {
+  x1.style.display = "block";
+  x2.style.display = "none";
+  x3.style.display = "none";
+  x4.style.display = "none";
+}
+function cityClick() {
+  x1.style.display = "none";
+  x2.style.display = "block";
+  x3.style.display = "none";
+  x4.style.display = "none";
+}
+function islandClick() {
+  x1.style.display = "none";
+  x2.style.display = "none";
+  x3.style.display = "block";
+  x4.style.display = "none";
+}
+function foodClick() {
+  x1.style.display = "none";
+  x2.style.display = "none";
+  x3.style.display = "none";
+  x4.style.display = "block";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Border</title>
+
+<base href="img/" target="_blank">
+
+<meta charset="UTF-8"">
+<meta name="description" content="CSS Border element">
+<meta name="viewport" content="border-width=device-border-width;initial-scale=1.0">
+
+<style>
+.div1 {
+
+}
+.div1 p.dotted { border-style:dotted;}
+.div1 p.dashed { border-style: dashed;}
+.div1 p.solid { border-style: solid;}
+.div1 p.double { border-style: double;}
+.div1 p.groove{ border-style: groove;}
+.div1 p.ridge { border-style: ridge;}
+.div1 p.inset { border-style: inset;}
+.div1 p.outset { border-style: outset;}
+.div1 p.none { border-style: none;}
+.div1 p.hidden { border-style: hidden;}
+.div1 p.mix { border-style: dotted dashed solid double;}
+
+.div2 {
+
+}
+.div2 p { border-style:solid;}
+.div2 p.w5px { border-width:5px;}
+.div2 p.w2px { border-width:2px;}
+.div2 p.wmedium { border-width:medium;}
+.div2 p.wthick { border-width:thick;}
+.div2 p.w5px2px { border-width:5px 2px;}
+.div2 p.w5px10px2px { border-width:5px 10px 2px;}
+.div2 p.w5px10px15px20px { border-width:5px 10px 15px 20px}
+
+.div3 {
+
+}
+.div3 p { border-style:solid;}
+.div3 p.cred { border-color:red;}
+.div3 p.credgreenblueyellow { border-color:red green blue yellow;}
+
+.div4 {
+
+}
+.div4 p { border-style:solid;}
+.div4 p.round { border-radius:5px;}
+.div4 p.rounder {border-radius:10px;}
+.div4 p.roundest { border-radius:15px;}
+
+.div5 {
+
+}
+.div5 p.left {border-left: 3px dotted blue;}
+.div5 p.right {border-right: 5px dashed green;}
+.div5 p.top {border-top: 10px double yellow;}
+.div5 p.bottom {border-bottom:15px solid black;}
+</style>
+</head>
+
+<body>
+<ol type="I">
+<h2><li>DIFFERENT BORDER-STYLE</li></h2>
+<div class="div1">
+  <p class="dotted">A dotted border</p>
+  <p class="dashed">A dashed border</p>
+  <p class="solid">A solid border</p>
+  <p class="double">A double border</p>
+  <p class="groove">A groove border</p>
+  <p class="ridge">A ridge border</p>
+  <p class="inset">A inset border</p>
+  <p class="outset">A outset border</p>
+  <p class="none">A none border</p>
+  <p class="hidden">A hidden border</p>
+  <p class="mix">A mix border</p>
+</div>
+
+<h2><li>DIFFERENT BORDER-WIDTH</h2></li>
+<div class="div2">
+  <p class="w5px">A border border-width-5px</p>
+  <p class="w2px">A border border-width-2px</p>
+  <p class="wmedium">A border border-width-medium</p>
+  <p class="wthick">A border border-width-thick</p>
+  <p class="w5px2px">A border border-width-5px(top&bottom) 2px(left&right)</p>
+  <p class="w5px10px2px">A border border-width-5px(top) 10px(left&right) 2px(bottom)</p>
+  <p class="w5px10px15px20px">A border border-width-5px(top) 10px(right) 15px(bottom) 20px(left)</p>
+</div>
+
+<h2><li>DIFFERENT BORDER-COLOR</h2></li>
+<div class="div3">
+  <p class="cred">A border color red</p>
+  <p class="credgreenblueyellow">A border color red green blue yellow</p>
+</div>     
+
+<h2><li>ROUNDED BORDERS</h2></li>
+<div class="div4">
+  <p class="round">A round border</p>
+  <p class="rounder">A rounder border</p>
+  <p class="roundest">A roundest border</p>
+</div>
+
+<h2><li>SHORT HAND BORDER SIDES</li></h2>
+<div class="div5">
+  <p class="left">Border set left side</p>
+  <p class="right">Border set right side</p>
+  <p class="top">Border set top side</p>
+  <p class="bottom">Border set bottom side</p>
+  <p class="left right top bottom">Border set all sides</p>
+</ol>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="us-EN">
+<head>
+<title>CSS Layout - Horizontal & Vertical Alignment</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Layout - Horizontal & Vertical Alignment">
+<meta name="keywords" content="margin:auto, text-align:center, position, float, padding, line-height, transform, flexbox">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+span {
+  background-color: lightgrey;
+  color: red;
+  font-weight: bold;
+}
+.center {
+  text-align: center;
+  border: 1px solid green;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  display: block;
+}
+.absoluteright {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 1px solid green;
+  padding: 10px;
+  display: block;
+}
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+  border: 1px solid black;
+  padding: 10px;
+}
+.floatright {
+  float: right;
+  width: 200px;
+  border: 1px solid green;
+  padding: 10px;
+}
+.paddingwithoutheight {
+  padding: 50px 0;
+  text-align: center;
+  border: 1px solid green;
+}
+.heightequallineheight {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: 1px solid green;
+}
+.centerdiv {
+  position: relative;
+  height: 100px;
+  border: 1px solid green;
+}
+.centerdiv p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px solid green;
+}
+</style>
+</head>
+
+<body>
+<ol type="I">
+<h3><li>Center align by <span>margin:auto</span></li></h3>
+  <div>
+    <p class="center" style="max-width:200px; height:40px;">The text is center</p>
+    <img src="img_5terre.jpg" alt="5terre.jpg" class="center" width="300px"><br>
+  </div>
+
+<h3><li>Left & Right Align - Using <span>position</span></li></h3>
+  <div>
+    <p class="absoluteright">In my young and more vulnerable years, my father gave me some advice that I ve been turning over in my mind eer since.</p>
+  </div>
+  <br><br><br><br><br>
+
+<h3><li>Left & Right Align - Using <span>float</span> & <span>clearfix</span></li></h3>
+  <div class="clearfix">  
+    <img src="pineapple.jpg" alt="pineapple.jpg" class="floatright">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, mulla et dietum interdum...</p>
+  </div>
+
+<h3><li>Vertical center - using <span>padding</span> without <span>height</span></li></h3>
+  <div class="paddingwithoutheight">I am vertically center</div>
+
+<h3><li>Vertical center - using <span>height</span> = <span>line-height</span></li></h3>
+  <div class="heightequallineheight">I am vertically center</div>
+
+<h3><li>Vertical center - using <span>position</span> & <span>transform</span></li></h3>
+  <div class="centerdiv">
+    <p>I am vertically center</p>
+  </div>
+
+<h3><li>Vertical center - using Flexbox</li></h3>
+  <div class="flexbox">
+    <p>I am vertically center</p>
+  </div>
+</ol>
+</body>
+</html>

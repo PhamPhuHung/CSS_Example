@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Background</title>
+
+<base href="img/" target="_blank">
+
+<meta charset="UTF-8"">
+<meta name="description" content="CSS background element">
+<meta name="keywords" content="color, image, repeat, attachment, position, clip, origin">
+<meta name="viewport" content="width=device-width;initial-scale=1.0">
+
+<style>
+.color {
+  border:10px dotted black;
+  background-color:lightblue;
+  opacity:0.8;
+  padding:15px;
+}
+.image {
+  background-image: url("bgdesert.jpg");
+}
+.imageRepeatX {
+  background-image: url("bgdesert.jpg");
+  background-repeat: repeat-x;
+}
+.imageRepeatY {
+  background-image: url("bgdesert.jpg");
+  background-repeat: repeat-y;
+}
+.imageNorepeat {
+  background-image: url("bgdesert.jpg");
+  background-repeat: no-repeat;
+}
+.imagePosition {
+  background-image: url("bgdesert.jpg");
+  background-repeat: no-repeat;
+  background-position:right top;
+}
+.imageAttachmentFixed {
+  background-image: url("bgdesert.jpg");
+  background-repeat: no-repeat;
+  background-position:left bottom;
+  background-attachment: fixed;
+}
+.imageAttachmentScroll {
+  background-image: url("bgdesert.jpg");
+  background-repeat: no-repeat;
+  background-position:left bottom;
+  background-attachment: scroll;
+}
+td {
+  padding:0 20px;
+}
+</style>
+</head>
+<ol>
+  <table width="100%">
+  <tr>
+    <td>
+      <li>Background-Color Background-clip=Border box (default) Background-origin=Padding-box (default)</li>
+      <pre class="color" style="background-clip:border-box">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+    <td>
+      <li>Background-Image Background-origin=Content box</li>
+      <pre class="color" style="background-clip:Content-box">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <li>Background-Color Background-origin=Border-box </li>
+      <pre class="color" style="background-origin:border-box">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+    <td>
+      <li>Background-Image Background-clip=Padding box</li>
+      <pre class="color" style="background-clip:padding-box">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <li>Background-Color Background-clip=Content box</li>
+      <pre class="color" style="background-clip: content-box">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+    <td>
+      <li>Background-Image</li>
+      <pre class="image">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <li>Background-Image repeatX</li>
+      <pre class="imageRepeatX">
+ 
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+    <td>
+      <li>Background-Image repeatY</li>
+      <pre class="imageRepeatY">
+ 
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <li>Background-Image norepeat</li>
+      <pre class="imageNorepeat">
+ 
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+    <td>
+      <li>Background-Image position top right</li>
+      <pre class="imagePosition">
+ 
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <li>Background-Image Attachment Fixed</li>
+      <pre class="imageAttachmentFixed">
+ 
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+    <td>
+      <li>Background-Image Attachment Scroll</li>
+      <pre class="imageAttachmentScroll">
+ 
+
+
+
+
+
+
+
+
+
+      </pre>
+    </td>
+  </tr>
+<table>
+
+<body>
+
+</body>
+</html>

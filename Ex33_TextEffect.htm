@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Text effect</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="text-overflow, word-wrap, word-break, writing-mode">
+<meta name="description content="CSS Text effect">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+p.overflow_ex {
+  white-space: nowrap;
+  width: 220px;
+  border: 1px solid black;
+}
+p.wordwrap_ex, p.wordbreak_ex {
+  width: 220px;
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<h2>Text-overflow</h2>
+<form>
+  <input type="radio" id="id1" name="overflow" value="o1" checked onclick="overflowClick1()">
+  <label for="id1">Overflow: visible</label><br>
+  <input type="radio" id="id2" name="overflow" value="o2" onclick="overflowClick2()">
+  <label for="id2">Overflow: hidden; text-overflow: clip;</label><br>
+  <input type="radio" id="id3" name="overflow" value="o3" onclick="overflowClick3()">
+  <label for="id3">Overflow: hidden; text-overflow: ellipsis;</label><br>
+</form>
+<p id="overflow" class="overflow_ex">This is some long text that will not fit in the box</p>
+
+<h2>Word-wrap</h2>
+<form>
+  <input type="radio" id="id11" name="wordwrap" value="w1" checked onclick="wordwrapClick1()">
+  <label for="id11">Word-wrap: normal (default) (break with '-')</label><br>
+  <input type="radio" id="id12" name="wordwrap" value="w2" onclick="wordwrapClick2()">
+  <label for="id12">Word-wrap: break-word</label><br>
+</form>
+<p id="wordwrap" class="wordwrap_ex">This paragraph contains a very long word: thisisaveryveryveryveryveryveryverylongword. This paragraph contains a-very-long-word.</p>
+
+<h2>Word-break;</h2>
+<form>
+  <input type="radio" id="id21" name="wordbreak" value="w1" checked onclick="wordwbreakClick1()">
+  <label for="id21">Word-break: normal (default) (break with usual rules)</label><br>
+  <input type="radio" id="id22" name="wordbreak" value="w2" onclick="wordbreakClick2()">
+  <label for="id22">Word-break: keep-all (break with '-')</label><br>
+  <input type="radio" id="id23" name="wordbreak" value="w2" onclick="wordbreakClick3()">
+  <label for="id23">Word-break: break-all</label><br>
+</form>
+<p id="wordbreak" class="wordbreak_ex">This paragraph contains a very long word: thisisaveryveryveryveryveryveryverylongword. This paragraph contains a-very-long-word.</p>
+
+<h2>Writing-mode</h2>
+<form>
+  <input type="radio" id="id31" name="writingmode" value="w1" checked onclick="writingmodeClick1()">
+  <label for="id31">Writing-mode: horizontal-tb (content flow horizontally from left to right, vertically from top to bottom)</label><br>
+  <input type="radio" id="id32" name="writingmode" value="w2" onclick="writingmodeClick2()">
+  <label for="id32">Writing-mode: vertical-rl (content flow vertically from top to bottom, horizontally from right to left)</label><br>
+  <input type="radio" id="id33" name="writingmode" value="w2" onclick="writingmodeClick3()">
+  <label for="id33">Word-break: vertical-lr (content flow vertically from top to bottom, horizontally from left to right)</label><br>
+</form>
+<p id="writingmode">
+This is first line!<br>
+This is second line!
+</p>
+
+<script>
+var overflow = document.getElementById("overflow");
+function overflowClick1() { overflow.style.overflow = "visible"; }
+function overflowClick2() { overflow.style.overflow = "hidden"; overflow.style.textOverflow = "clip"; }
+function overflowClick3() { overflow.style.overflow = "hidden"; overflow.style.textOverflow = "ellipsis"; }
+
+var wordwrap = document.getElementById("wordwrap");
+function wordwrapClick1() { wordwrap.style.wordWrap = "normal"; }
+function wordwrapClick2() { wordwrap.style.wordWrap = "break-word"; }
+
+var wordbreak = document.getElementById("wordbreak");
+function wordbreakClick1() { wordbreak.style.wordBreak = "normal"; }
+function wordbreakClick2() { wordbreak.style.wordBreak= "keep-all"; }
+function wordbreakClick3() { wordbreak.style.wordBreak= "break-all"; }
+
+var writingmode = document.getElementById("writingmode");
+function writingmodeClick1() { writingmode.style.writingMode = "horizontal-tb"; }
+function writingmodeClick2() { writingmode.style.writingMode = "vertical-rl"; }
+function writingmodeClick3() { writingmode.style.writingMode = "vertical-lr"; }
+</script>
+</body>
+</html>

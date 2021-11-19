@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Transfoms</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="translateX, translateY, translate, rotate, scale, scaleX, scaleY, skew, skewX, skewY, matrix, rotateX, rotateY, rotateZ">
+<meta name="description content="CSS Transform>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { box-sizing: border-box; }
+span { background-color: lightgray; color: red;}
+table, th, td { border: 1px solid lightgray; }
+table { width: 100%; border-collapse: collapse; }
+td { padding: 60px;}
+.original {
+  width: 100px;
+  height: 80px;
+  background-color: RGBA(255,0,0,0.3);
+  text-transform: uppercase;
+  border: 1px solid RGBA(0,0,0,0.3);
+  position: relative;
+}
+.transform {
+  width: 100px;
+  height: 80px;
+  background-color: RGBA(255,0,0,0.7);
+  text-transform: uppercase;
+  border: 1px solid RGBA(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.translateX { transform: translateX(50px); }
+.translateY { transform: translateY(50px); }
+.translate { transform: translate(50px, 50px); }
+.scaleX { transform: scaleX(1.5); }
+.scaleY { transform: scaleY(0.8); }
+.scale { transform: scale(1.5, 0.8); }
+.skewX { transform: skewX(20deg); }
+.skewY { transform: skewY(30deg); }
+.skew { transform: skew(20deg, 30deg); }
+.rotate { transfrom: rotate(20deg); }
+.matrix { transform: matrix(1, -0.3, 0, 1, 50, 50); }
+.rotateX { transform: rotateX(60deg); }
+.rotateY { transform: rotateY(60deg); }
+.rotateZ { transform: rotateZ(60deg); }
+</style>
+</head>
+<table>
+  <tr>
+    <td>
+      <p>TranslateX(50px)</p>
+      <div class="original">Original<div class="transform translateX">Transform</div></div>
+    </td>
+    <td>
+      <p>TranslateY(50px)</p>
+      <div class="original">Original<div class="transform translateY">Transform</div></div>
+    </td>
+    <td>
+      <p>Translate(50px, 50px)</p>
+      <div class="original">Original<div class="transform translate">Transform</div></div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>ScaleX(1.5)</p>
+      <div class="original">Original<div class="transform scaleX">Transform</div></div>
+    </td>
+    <td>
+      <p>ScaleY(0.8)</p>
+      <div class="original">Original<div class="transform scaleY">Transform</div></div>
+    </td>
+    <td>
+      <p>Scale(1.5, 0.8)</p>
+      <div class="original">Original<div class="transform scale">Transform</div></div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>SkewX(20deg)</p>
+      <div class="original">Original<div class="transform skewX">Transform</div></div>
+    </td>
+    <td>
+      <p>SkewY(30deg)</p>
+      <div class="original">Original<div class="transform skewY">Transform</div></div>
+    </td>
+    <td>
+      <p>Skew(20deg, 30deg)</p>
+      <div class="original">Original<div class="transform skew">Transform</div></div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>Rotate(20deg)</p>
+      <div class="original">Original<div class="transform rotate">Transform</div></div>
+    </td>
+    <td colspan="2">
+      <p>Matrix(1, -0.3, 0, 1, 50, 50)<br>
+        <span>matrix(scaleX,skewY,skewX,scaleY,translateX,translateY)</span>
+      </p>
+      <div class="original">Original<div class="transform matrix">Transform</div></div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>3D Transform - RotateX(60deg)</p>
+      <div class="original">Original<div class="transform rotateX">Transform</div></div>
+    </td>
+    <td>
+      <p>3D Transform - RotateY(60deg)</p>
+      <div class="original">Original<div class="transform rotateY">Transform</div></div>
+    </td>
+    <td>
+      <p>3D Transform - RotateZ(60deg)</p>
+      <div class="original">Original<div class="transform rotateZ">Transform</div></div>
+    </td>
+  </tr>
+
+<body>
+<form
+</body>
+</html>

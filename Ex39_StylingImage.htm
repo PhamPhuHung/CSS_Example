@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Styling Image</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Tooltip">
+<meta name="keywords" content="CSS Styling Image">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.ex1 {
+  display: inline-block;
+  float: left;
+}
+img {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+.rounded {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.circle {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  border-radius: 50%;
+}
+.thumbnail {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.thumbnaillink {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+.thumbnaillink:hover{
+  box-shadow: 0 0 2px 1px lightblue;
+}
+.card {
+  width: 300px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 RGBA(0,0,0,0.2), 0 6px 20px 0 RGBA(0,0,0,0.1);
+}
+.imgInCard {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+.content {
+  text-align: center;
+  padding: 5px;
+}
+.fade {
+  width: 400px;
+  height: auto;
+  position: relative;
+}
+.fadeimg {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+.fadetext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #008CBA;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.fadetext p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200%;
+}
+.fade:hover .fadetext {
+  opacity: 1;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+
+<body>
+<h2 style="display: block;">Rounded Images</h2>
+<img src="paris.jpg" alt="Paris.jpg" class="rounded">
+<img src="paris.jpg" alt="Paris.jpg" class="circle">
+
+<h2>Cards</h2>
+<div class="card">
+  <img class="imgInCard" src="img_forest.jpg">
+  <div class="content"><p>Forest</p></div>
+</div>
+
+<h2>Image Hover Overlay</h2>
+<div class="clearfix">
+<div class="ex1">
+  <h3>Fade in Text</h3>
+  <div class="fade">
+    <img src="img_avatar.png" class="fadeimg">
+    <div class="fadetext"><p>Hello World</p></div>
+  </div>
+</div>
+</div>
+
+<h2>Thumbnail Images</h2>
+<div class="ex1">
+  <p>Thumbnail Image</p>
+  <img src="paris.jpg" alt="Paris.jpg" class="thumbnail">
+</div>
+<div class="ex1">
+  <p>Thumbnail Image as link</p>
+  <a href="paris.jpg"><img src="paris.jpg" alt="Paris.jpg" class="thumbnaillink"></a>
+</div>
+
+</body>
+</html>

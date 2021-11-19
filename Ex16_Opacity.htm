@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title>CSS Opacity / Transparent</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Opacity / Transparent">
+<meta name="keywords" content="opacity">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+span {
+  background-color: lightgrey;
+  color: red;
+}
+* {
+  box-sizing: border-box;
+}
+.clearfix p {
+  width: 100%;
+  text-align: center;
+}
+.ex1 {
+  float: left;
+  width: 33.33%; /* 3 boxes */
+  padding: 5px;
+}
+
+.ex2 {
+  float: left;
+  width: 33.33%; /* 3 boxes */
+  padding: 5px;
+  opacity: 0.5;
+}
+.ex2:hover {
+  opacity: 1;
+}
+
+div.background {
+  background: url("klematis.jpg") repeat;
+  border: 2px solid black;
+}
+div.transparentbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+div.transparentbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: black;
+}
+</style>
+</head>
+<body>
+<ol type="I">
+<h3><li>Transparent Image</li></h3>
+<div class="clearfix">
+  <div class="ex1">
+    <img src="img_forest.jpg" alt="forest.jpg" style="opacity:1; width:100%;">
+    <p>Opacity: 0.2</p>
+  </div>
+  <div class="ex1">
+    <img src="img_forest.jpg" alt="forest.jpg" style="opacity:1; width:100%;">
+    <p>Opacity: 0.5</p>
+  </div>
+  <div class="ex1">
+    <img src="img_forest.jpg" alt="forest.jpg" style="opacity:1; width:100%;">
+    <p>Opacity: 1</p>
+  </div>
+</div>
+
+<h3><li>Transparent Hover Effect</li></h3>
+<p>The <span>opacity</span> property is often used together with the </span>:hover</span> selector to change the opacity on mouse-over:</p>
+<div class="clearfix">
+  <div class="ex2">
+    <img src="img_5terre.jpg" alt="forest.jpg" style="width:100%;">
+  </div>
+  <div class="ex2">
+    <img src="img_forest.jpg" alt="5terre.jpg" style="width:100%;">
+  </div>
+  <div class="ex2">
+    <img src="img_mountains.jpg" alt="mountains.jpg" style="width:100%;">
+  </div>
+  </div>
+</div>
+
+<h3><li>Text in Transparent Box</li></h3>
+<div class="background">
+  <div class="transparentbox">
+    <p>This is some text that is placed in the transparent box.</p>
+  </div>
+</div>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Combinators</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Combinators">
+<meta name="keywords" content=" descendant selector (space), child selector (>), adjacent sibling selector (+), general sibling selector (~)>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.descendant p { background-color: orange; }
+.child > p { background-color: orange; }
+.adjacent + p { background-color: orange; }
+.general ~ p { background-color: orange; }
+</style>
+</head>
+
+<body>
+<ol type="I">
+<h3><li>Descendant Selector</li></h3>
+  <p>The descendant seletor matches all elements that are descendants of a specified element.</p>
+  <div class="descendant">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <p>Paragraph 3 in the div</p>
+  </div>
+  <p>Paragraph 4 not in the div</p>
+  <p>Paragraph 5 not in the div</p>
+<h3><li>Child Selector</li></h3>
+  <p>The child selector selects all elements that are the children of a specified element.</p>
+  <div class="child">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <p>Paragraph 3 in the div<br>
+      <div>Div 3.1 is the child of paragraph 3. Descendant (but not child) of the div</div>
+    </p>
+  </div>
+  <p>Paragraph 4 not in the div</p>
+  <p>Paragraph 5 not in the div</p>
+
+<h3><li>Adjacent sibling Selector</li></h3>
+  <p>The adjacent sibling selector is used to select n element that is directly after another specific element.<br>
+  Sibling elements must have the same parent element, and "adjacent" means "immediately following".</p>
+  <div class="adjacent">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <p>Paragraph 3 in the div</p>
+  </div>
+  <p>Paragraph 4 not in the div, "immediately following" the div</p>
+  <p>Paragraph 5 not in the div</p>
+
+<h3><li>General siblings selector</li></h3>
+  <p>The general sibling selector selects all elements that are siblings of a specified element.</p>
+  <div class="general">
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <p>Paragraph 3 in the div</p>
+  </div>
+  <p>Paragraph 4 not in the div, following the div</p>
+  <p>Paragraph 5 not in the div, following the div</p>
+</ol>
+</body>
+</html>

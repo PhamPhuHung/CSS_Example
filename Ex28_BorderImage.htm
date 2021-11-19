@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Border Images</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="keywords" content="border-image, border-image-source, border-image-slice, border-image-width, border-image-outset, border-image-repeat">
+<meta name="description content="CSS Border Images">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+span { 
+  background-color: lightgray;
+  color: red;
+}
+.border {
+  border: 15px solid transparent;
+  padding: 15px;
+  border-image-source: url(border.png);
+  border-image-repeat: round;
+  border-image-slice: 30;
+  border-image-width: initial;
+  border-image-repeat: round;
+}
+.borderPer {
+  border: 15px solid transparent;
+  padding: 15px;
+  border-image-source: url(border.png);
+  border-image-repeat: round;
+  border-image-slice: 30%;
+  border-image-width: initial;
+  border-image-repeat: round;
+}
+</style>
+</head>
+
+<body>
+<h2>Border-image</h2>
+<div class="border">border-image: url(border.png) 30 round;</div>
+
+<h2>Border-image-slice</h2>
+<form>
+  <input type="radio" id="id1" name="slice" value="ten" onclick="sliceValue1()">
+  <label for="id1">10</label>
+  <input type="radio" id="id2" name="slice" value="thirty" checked onclick="sliceValue2()">
+  <label for="id2">30</label>
+  <input type="radio" id="id3" name="slice" value="fifty" onclick="sliceValue3()">
+  <label for="id3">50</label>
+  <input type="radio" id="id4" name="slice" value="twenty_twentyfive" onclick="sliceValue4()">
+  <label for="id4">20 25</label>
+  <input type="radio" id="id5" name="slice" value="twenty_thirty" onclick="sliceValue5()">
+  <label for="id5">20 30</label>
+  <input type="radio" id="id6" name="slice" value="forty_ten" onclick="sliceValue6()">
+  <label for="id6">40 10</label>
+</form>
+<div class="border" id="slice">border-image: url(border.png) 30 round;</div>
+
+<h2>Border-image-slice %</h2>
+<form>
+  <input type="radio" id="id11" name="slicex" value="ten" onclick="slicePer1()">
+  <label for="id11">10%</label>
+  <input type="radio" id="id12" name="slicex" value="thirty" checked onclick="slicePer2()">
+  <label for="id12">30%</label>
+  <input type="radio" id="id13" name="slicex" value="fifty" onclick="slicePer3()">
+  <label for="id13">50%</label>
+  <input type="radio" id="id14" name="slicex" value="twenty_twentyfive" onclick="slicePer4()">
+  <label for="id14">20% 25%</label>
+  <input type="radio" id="id15" name="slicex" value="twenty_thirty" onclick="slicePer5()">
+  <label for="id15">20% 30%</label>
+  <input type="radio" id="id16" name="slicex" value="forty_ten" onclick="slicePer6()">
+  <label for="id16">40% 10%</label>
+</form>
+<div class="borderPer" id="slicePer">border-image: url(border.png) 30% round;</div>
+
+<h2>Border-image-repeat</h2>
+<form>
+  <input type="radio" id="id21" name="repeat" value="stretch" onclick="repeat1()">
+  <label for="id21">stretch (default)</label>
+  <input type="radio" id="id22" name="repeat" value="rep" onclick="repeat2()">
+  <label for="id22">repeat</label>
+  <input type="radio" id="id23" name="repeat" value="round" checked onclick="repeat3()">
+  <label for="id23">round</label>
+  <input type="radio" id="id24" name="repeat" value="space" onclick="repeat4()">
+  <label for="id24">space</label>
+</form>
+<div class="border" id="repeat">border-image: url(border.png) 30 stretch;</div>
+<ul>
+  <li><span>stretch</span> - The image is stretched to fill the area</li>
+  <li><span>repeat</span> - The image is tiled (repeatd) to fill the area</li>
+  <li><span>round</span> - The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the image is rescaled so it fits</li>
+  <li><span>space</span> - The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles</li>
+  <li><span>initial</span></li>
+  <li><span>inherit</span></li>
+</ul>
+
+<h2>Border-image-outset</h2>
+<p>Offset the border outside, can use px (length), number (ex 1 mean offset 1 boder)</p>
+
+<h2>Border-image-width</h2>
+<p>The width of image, can use px (length), number (ex 2 mean double initial width), % (ex 10% 20% mean 10% of horizontal area, 20% of vertial area)</p> 
+<script>
+var slice = document.getElementById("slice");
+function sliceValue1() { slice.style.borderImageSlice = "10"; slice.innerHTML = "border-image: url(border.png) 10 round";}
+function sliceValue2() { slice.style.borderImageSlice = "30"; slice.innerHTML = "border-image: url(border.png) 30 round";}
+function sliceValue3() { slice.style.borderImageSlice = "50"; slice.innerHTML = "border-image: url(border.png) 50 round";}
+function sliceValue4() { slice.style.borderImageSlice = "20 25"; slice.innerHTML = "border-image: url(border.png) 20 25 round";}
+function sliceValue5() { slice.style.borderImageSlice = "20 30"; slice.innerHTML = "border-image: url(border.png) 20 30 round";}
+function sliceValue6() { slice.style.borderImageSlice = "40 10"; slice.innerHTML = "border-image: url(border.png) 40 10 round";}
+
+var slicePer = document.getElementById("slicePer");
+function slicePer1() { slicePer.style.borderImageSlice = "10%"; slicePer.innerHTML = "border-image: url(border.png) 10% round";}
+function slicePer2() { slicePer.style.borderImageSlice = "30%"; slicePer.innerHTML = "border-image: url(border.png) 30% round";}
+function slicePer3() { slicePer.style.borderImageSlice = "50%"; slicePer.innerHTML = "border-image: url(border.png) 50% round";}
+function slicePer4() { slicePer.style.borderImageSlice = "20% 25%"; slicePer.innerHTML = "border-image: url(border.png) 20% 25% round";}
+function slicePer5() { slicePer.style.borderImageSlice = "20% 30%"; slicePer.innerHTML = "border-image: url(border.png) 20% 30% round";}
+function slicePer6() { slicePer.style.borderImageSlice = "40% 10%"; slicePer.innerHTML = "border-image: url(border.png) 40% 10% round";}
+
+var repeat = document.getElementById("repeat");
+function repeat1() { repeat.style.borderImageRepeat = "stretch"; repeat.innerHTML = "border-image: url(border.png) 30 stretch;"}
+function repeat2() { repeat.style.borderImageRepeat = "repeat"; repeat.innerHTML = "border-image: url(border.png) 30 repeat";}
+function repeat3() { repeat.style.borderImageRepeat = "round"; repeat.innerHTML = "border-image: url(border.png) 30 round";}
+function repeat4() { repeat.style.borderImageRepeat = "space"; repeat.innerHTML = "border-image: url(border.png) 30 space";}
+</script>
+</body>
+</html>

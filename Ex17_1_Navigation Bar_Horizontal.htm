@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS Horizontal Navigation Bar</title>
+<base href="img/" target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="CSS Horizontal Navigation Bar">
+<meta name="keywords" content="display:inline, float:left, float:right, position:sticky">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ul.ex1 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+ul.top {
+  position: fixed;
+  top: 0;
+}
+ul.bottom {
+  position: fixed;
+  bottom: 0;
+}
+ul.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+ul.ex1 li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+ul.ex1 li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.ex1 li a.active {
+  background-color: green;
+}
+ul.ex1 li a:hover:not(.active) {
+  background-color: #111;
+}
+</style>
+</head>
+
+<body>
+
+<ul class="ex1 bottom">
+  <li><a href="">Bottom navigation bar</a></li>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right; border-left:1px solid #bbb;"><a href="#about">About</a></li>
+</ul>
+
+<ul class="ex1 top">
+  <li><a href="">Top navigation bar</a></li>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right; border-left:1px solid #bbb;"><a href="#about">About</a></li>
+</ul>
+
+<h2>Scroll Down</h2>
+<p>Scroll down to see the sticky effect.</p>
+<ul class="ex1 sticky" style="background-color:red;">
+  <li><a href="">Sticky navigation bar</a></li>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right; border-left:1px solid #bbb;"><a href="#about">About</a></li>
+</ul>
+<p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+</body>
+</html>
